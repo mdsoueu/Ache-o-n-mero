@@ -84,5 +84,4 @@ int main() {
  *
  * Entrei na fase;
  * 1º Digito o número;
- * 2º Se eu digito o número errado, encerra o programa. Caso eu acerto o número,
- * passo para o próxima fase -- fazendo o teste o número muda; */
+ * 2º Se eu digito o número errado, encerra o programa. Caso eu acerto o número, passa para o próxima fase -- fazendo o teste o número muda; */
