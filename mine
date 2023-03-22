@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-/* Game --> adivinhação / de 1-100 */
-
  /* ETAPA 1:                                                                                                *
    * Caso meu chute seja igual ao número secreto, irá aparecer a mensagem "Verdadeiro" "Fim do jogo!".      *
    * Caso meu chute seja diferente do número secreto, irá aparecer "Falso" "Fim de jogo!".                  *
@@ -15,93 +9,6 @@
    * WHILE (?) {...} --> se minha condição for verdadeira, irá realizar meu escopo.                               *
    * DO-WHILE {...} (?)--> Somente no final a verificação é feita, e só irá repetir meu escopo se for verdadeiro. */
   /* While (numero_secreto != chute) {..} */
-
-
-jogo(){ 
-   /* int numero_secreto = 17; */
-  srand(time(0)); /* Uma sementre criada baseada na hora, quando muda a hora, muda o número sortido */
-  int numero_secreto = rand() %100; /* Posso escolher atribuir um valor para essa variável ou não */ 
-  int chute;
-  /* Tenho que tomar cuidado, pois posso ter um retorno que seja lixo eletrônico */
-  do{
-      printf("Digite um número: ");
-      scanf("%d", &chute);
-    
-   //printf("%d\n", numero_secreto);
-    
-    if(numero_secreto == chute){
-      printf("Você acertou!!\n");
-      printf("O número secreto é %d.\n", numero_secreto);
-    } else {
-      printf("Você errou! Tente novamente.\n");
-        if(numero_secreto<chute){
-            printf(" ----------------------------------\n");
-            printf("|      Dica -> O número é menor!   |\n");
-            printf(" ----------------------------------\n");
-            printf("\n");
-        } else 
-            if(numero_secreto>chute) {
-                printf(" ----------------------------------\n");
-                printf("|     Dica -> O número é maior!   |\n");
-                printf(" ----------------------------------\n");
-                printf("\n");
-              }   
-    }
-  } while(numero_secreto!=chute);
-  printf("\nFim do jogo!");
-}
-int main(void) {
-  int opcao;
-  int i=0;
-  int dificuldade;
-  
-  printf("\t***********************\n");
-  printf("\t***  ACHE O NÚMERO  ***\n");
-  printf("\t***********************\n");
-
-  printf("\nEscolha o nível de dificuldade:\n");
-  printf(" 1 - Insano (1 chance)\n");
-  printf(" 2 - Difícil (2 chances)\n");
-  printf(" 3 - Médio (3 chances)\n");
-  printf(" 4 - Fácil (4 chances)\n");
-  printf(" 5 - Noob (5 chances)\n");
-  printf("Digite um número interiro: ");
-  scanf("%d", &opcao);
-
-  /* < -- menor / > -- maior */
-    switch (opcao){
-        /*case 5:
-          for(int i=0; i<=5; i++){
-            jogo();
-            return 0;
-          }
-        break;
-    
-       case 4: 
-          for(int i=0; i<4;i++){
-            jogo();
-          }
-        break;
-    
-        case 3: 
-          for(int i=0; i<3;i++){
-            jogo();
-          }
-        break;
-    
-        case 2: 
-          for(int i=2; i>0;i--){
-            jogo();
-          }
-        break;
-    
-        case 1: 
-          for(int i=2;i<1;i++){
-            jogo();
-          }
-        break;*/
-  } /* Fim do switch */
-}
 
 /*         DESAFIO              *
  *  1 - Insano (1 chance)       *
