@@ -8,7 +8,6 @@ int main()
     srand(time(0));
     int numerosecreto = rand() % 100;
     int chute;
-    int dificuldade;
     
     printf("***********************\n");
     printf("**Jogo da Adivinhação**\n");
@@ -16,17 +15,7 @@ int main()
     
     // printf("%d\n\n", numerosecreto);
 
-    do{
-      printf("\nEscolha o nível de dificuldade:\n");
-        printf(" 1 - Insano (1 chance)\n");
-        printf(" 2 - Difícil (2 chances)\n");
-        printf(" 3 - Médio (3 chances)\n");
-        printf(" 4 - Fácil (4 chances)\n");
-        printf(" 5 - Noob (5 chances)\n");
-        printf("Digite um número interiro: ");
-        scanf("%d", &dificuldade);
-    } while (dificuldade<1 || dificuldade>5);
-
+    printf("Os números são de 0 a 100.\n");
     do{
         printf("Digite um número inteiro: ");
         scanf("%d", &chute);
@@ -42,9 +31,7 @@ int main()
             }else{
                 printf("Seu chute foi maior!\n");
             }
-            
         }
     }while(numerosecreto != chute);
-
     printf("Fim de jogo!");
 }
